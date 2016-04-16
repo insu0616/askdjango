@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<br><br><br>
+{{ post.title }}
+<img src="{{post.photo.url}}" />
+<hr/>
+{{post.content}}
+<hr/>
+<div class="fb-comments" data-href="http://localhost:8000/blog/" data-numposts="3"></div>
+<br>
+
+<a href="{% url "blog.views.post_list" %}"> 글 목록으로 </a>
+{% endblock %}
